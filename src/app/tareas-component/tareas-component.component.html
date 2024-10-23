@@ -1,0 +1,20 @@
+<h2>
+    Tareas
+</h2>
+<div>
+    <h3>Lista de tareas</h3>
+    <br>
+    <div *ngFor="let curso of cursos">
+        <app-detalle-tarea-component [nombreCurso]="curso.nombre" [descCurso]="curso.desc"></app-detalle-tarea-component>
+    </div>
+
+    
+</div>
+<div class="formulario">
+    <h3>Formulario</h3>
+    <div class="form">
+        <label>Nombre de la tarea: <input type="text" [(ngModel)]="valorNombre"></label>
+        <label>Descripcion: <input type="text" [(ngModel)]="valorDesc"></label>
+        <button (click)="agregar()" type="button">submit</button>
+    </div>
+</div>
